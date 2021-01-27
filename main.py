@@ -128,9 +128,9 @@ class Maze:
 
         for area in areas:
             if (area[-1] in self.walls) and (
-                    area[0] in self.paths) and (
-                    area[1] in self.paths) and (
-                    area[2] in self.paths):
+                    area[0] in self.paths or area[0] in self.pathfinders) and (
+                    area[1] in self.paths or area[1] in self.pathfinders) and (
+                    area[2] in self.paths or area[2] in self.pathfinders):
                 return False
 
         return True
